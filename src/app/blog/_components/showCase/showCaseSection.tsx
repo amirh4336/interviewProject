@@ -1,25 +1,27 @@
-import ShowCase from "./showCase";
+import { Button } from "@/components/ui/button";
+import ShowCaseCarousel from "./showCaseCarousel";
 
 const ShowCaseSection = () => {
   return (
-    <div className="grid w-full grid-cols-2 gap-4 bg-[#f0f0f0] p-4 md:grid-cols-4">
-      <div className="container mx-auto space-y-4 py-8">
-        <ShowCase
-          title="T-Shirt Printing"
-          imageSrc="/placeholder.svg?height=150&width=150"
-        />
-        <ShowCase
-          title="Mug Printing"
-          imageSrc="/placeholder.svg?height=150&width=150"
-        />
-        <ShowCase
-          title="Flag Printing"
-          imageSrc="/placeholder.svg?height=150&width=150"
-        />
-        <ShowCase
-          title="USB Engraving"
-          imageSrc="/placeholder.svg?height=150&width=150"
-        />
+    <div className="w-full overflow-hidden bg-[#f0f0f0] p-4 pl-0">
+      <div className="!ml-0 mr-auto flex gap-x-[30px]  pb-1 pt-5 md:max-w-[1350px]">
+        <div className="mb-3 flex !w-[165px] flex-col justify-between text-center">
+          <div>
+            <h2 className="pb-[20px] text-xl font-bold">
+              محــصــــولات نمایشگــــاهی وهمــــایـــــش
+            </h2>
+            <p className="text-[12px] font-medium">
+              ارائه سفارش محــصــــولات نمایشگــــاهی با استفاده از چاپ دیجیتال
+            </p>
+          </div>
+          <Button
+            className="mx-auto w-[150px] rounded-[3px] border-[#cacaca] bg-transparent font-bold"
+            variant="outline"
+          >
+            مشاهده همه
+          </Button>
+        </div>
+        <ShowCaseCarousel />
       </div>
     </div>
   );
