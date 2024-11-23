@@ -1,3 +1,13 @@
 {
-  "extends": ["next/core-web-vitals", "next/typescript"]
+  "extends": [
+    "next/core-web-vitals",
+    "next/typescript",
+    "plugin:tailwindcss/recommended"
+  ],
+  "rules": {
+    // Tailwind-specific ESLint rules
+    "tailwindcss/classnames-order": "warn", // Enforce consistent class ordering
+    "tailwindcss/no-custom-classname": "warn", // Prevent arbitrary class names
+    "tailwindcss/no-contradicting-classname": "error" // Detect conflicting classes
+  }
 }
